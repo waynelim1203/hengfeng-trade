@@ -1,178 +1,203 @@
 {
   "toilet": [
     {
-      "id": "TU-3",
+      "id": "TU-1",
       "model": "2001",
       "name": "分体马桶地排s",
       "spec": "250mm",
+      "type": "马桶",
       "price": 490
     },
     {
-      "id": "TU-4",
+      "id": "TU-2",
       "model": "2002",
-      "name": "澳洲分体马桶\n地排S接头/墙排p接头",
+      "name": "澳洲分体马桶地排S接头/墙排p接头",
       "spec": "",
+      "type": "马桶",
       "price": 620
     },
     {
-      "id": "TU-5",
+      "id": "TU-3",
       "model": "2003",
       "name": "分体马桶地排S",
       "spec": "250mm",
+      "type": "马桶",
       "price": 420
     },
     {
-      "id": "TU-6",
+      "id": "TU-4",
       "model": "2004",
       "name": "分体马桶地排S",
       "spec": "",
+      "type": "马桶",
       "price": 430
     },
     {
-      "id": "TU-7",
+      "id": "TU-5",
       "model": "2005",
       "name": "分体马桶地排S",
       "spec": "",
+      "type": "马桶",
       "price": 460
     },
     {
-      "id": "TU-8",
+      "id": "TU-6",
       "model": "2006",
       "name": "分体马桶横排S/地排P",
       "spec": "250mm",
+      "type": "马桶",
       "price": 510
     },
     {
-      "id": "TU-9",
+      "id": "TU-7",
       "model": "2007",
       "name": "分体马桶地排s/墙排p",
       "spec": "250mm",
+      "type": "马桶",
       "price": 510
     },
     {
-      "id": "TU-10",
+      "id": "TU-8",
       "model": "2008",
       "name": "澳洲分体马桶地排s/墙排p",
       "spec": "",
+      "type": "马桶",
+      "price": 680
+    },
+    {
+      "id": "TU-9",
+      "model": "2009",
+      "name": "澳洲分体马桶地排S/墙排P",
+      "spec": "",
+      "type": "马桶",
+      "price": 680
+    },
+    {
+      "id": "TU-10",
+      "model": "2010",
+      "name": "澳洲分体马桶地排S/墙排P",
+      "spec": "",
+      "type": "马桶",
       "price": 680
     },
     {
       "id": "TU-11",
-      "model": "2009",
-      "name": "澳洲分体马桶地排S/墙排P",
-      "spec": "",
-      "price": 680
-    },
-    {
-      "id": "TU-12",
-      "model": "2010",
-      "name": "澳洲分体马桶地排S/墙排P",
-      "spec": "",
-      "price": 680
-    },
-    {
-      "id": "TU-13",
       "model": "2028",
       "name": "分体马桶（地排s、墙排P)",
       "spec": "",
+      "type": "马桶",
+      "price": 0
+    },
+    {
+      "id": "TU-12",
+      "model": "2011",
+      "name": "分体马桶地排s/墙排p",
+      "spec": "250mm",
+      "type": "马桶",
+      "price": 0
+    },
+    {
+      "id": "TU-13",
+      "model": "2025",
+      "name": "分体马桶地排s/墙排P",
+      "spec": "250mm",
+      "type": "马桶",
       "price": 0
     },
     {
       "id": "TU-14",
-      "model": "2011",
-      "name": "分体马桶地排s/墙排p",
-      "spec": "250mm",
-      "price": 0
+      "model": "4001",
+      "name": "立柱盆",
+      "spec": "",
+      "type": "立柱盆",
+      "price": 240
     },
     {
       "id": "TU-15",
-      "model": "2025",
-      "name": "分体马桶地排s/墙排P",
-      "spec": "250mm",
-      "price": 0
+      "model": "4002",
+      "name": "立柱盆",
+      "spec": "",
+      "type": "立柱盆",
+      "price": 270
+    },
+    {
+      "id": "TU-4005",
+      "model": "4005",
+      "name": "立柱盆",
+      "spec": "",
+      "type": "立柱盆",
+      "price": 240
+    },
+    {
+      "id": "TU-4006",
+      "model": "4006",
+      "name": "立柱盆",
+      "spec": "",
+      "type": "立柱盆",
+      "price": 240
     },
     {
       "id": "TU-16",
-      "model": "4001",
-      "name": "立柱盆 ",
+      "model": "4007",
+      "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
       "id": "TU-17",
-      "model": "4002",
-      "name": "立柱盆 ",
-      "spec": "",
-      "price": 270
-    },
-    {
-      "id": "TU-18",
-      "model": "4005",
-      "name": "立柱盆 ",
-      "spec": "",
-      "price": 240
-    },
-    {
-      "id": "TU-19",
-      "model": "4006",
-      "name": "立柱盆 ",
-      "spec": "",
-      "price": 240
-    },
-    {
-      "id": "TU-20",
-      "model": "4007",
-      "name": "立柱盆",
-      "spec": "",
-      "price": 240
-    },
-    {
-      "id": "TU-21",
       "model": "4008",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-22",
+      "id": "TU-4009",
       "model": "4009",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-23",
+      "id": "TU-4010",
       "model": "4010",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-24",
+      "id": "TU-4011",
       "model": "4011",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-25",
+      "id": "TU-4003",
       "model": "4003",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-26",
+      "id": "TU-4004",
       "model": "4004",
       "name": "立柱盆",
       "spec": "",
+      "type": "立柱盆",
       "price": 240
     },
     {
-      "id": "TU-27",
+      "id": "TU-18",
       "model": "C003",
       "name": "蹲便器",
       "spec": "",
+      "type": "蹲便器",
       "price": 160
     }
   ],
@@ -181,492 +206,574 @@
       "id": "HJ-5001",
       "code": "HJ-5001",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Hot and cold",
+      "type": "厨房龙头",
       "price": 135
     },
     {
       "id": "HJ-5003",
       "code": "HJ-5003",
       "desc": "Gun grey Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 125
     },
     {
       "id": "HJ-5004",
       "code": "HJ-5004",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 130
     },
     {
       "id": "HJ-5005",
       "code": "HJ-5005",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 145
     },
     {
       "id": "HJ-5006",
       "code": "HJ-5006",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 100
     },
     {
       "id": "HJ-5007",
       "code": "HJ-5007",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 115
     },
     {
       "id": "HJ-5008",
       "code": "HJ-5008",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 155
     },
     {
       "id": "HJ-5009",
       "code": "HJ-5009",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 135
     },
     {
       "id": "HJ-5010",
       "code": "HJ-5010",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 150
     },
     {
       "id": "HJ-5011",
       "code": "HJ-5011",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 245
     },
     {
       "id": "HJ-5012",
       "code": "HJ-5012",
       "desc": "Stainless steel body Ceramic cartridge Stainless steel handle Hot and cold",
+      "type": "厨房龙头",
       "price": 220
     },
     {
       "id": "HJ-4001",
       "code": "HJ-4001",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "面盆龙头",
       "price": 60
     },
     {
       "id": "HJ-4002",
       "code": "HJ-4002",
       "desc": "Alloy body Ceramic cartridge Alloy handle Single Cold",
+      "type": "面盆龙头",
       "price": 60
     },
     {
       "id": "HJ-4003",
       "code": "HJ-4003",
       "desc": "Alloy body Ceramic cartridge Alloy handle Single Cold",
+      "type": "面盆龙头",
       "price": 60
     },
     {
       "id": "HJ-4005",
       "code": "HJ-4005",
       "desc": "Alloy body Ceramic cartridge Alloy handle Single Cold",
+      "type": "面盆龙头",
       "price": 35
     },
     {
       "id": "HJ-4006",
       "code": "HJ-4006",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "面盆龙头",
       "price": 40
     },
     {
       "id": "HJ-4007",
       "code": "HJ-4007",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "面盆龙头",
       "price": 45
     },
     {
       "id": "HJ-4008",
       "code": "HJ-4008",
       "desc": "Alloy body Ceramic cartridge Single Cold",
+      "type": "面盆龙头",
       "price": 80
     },
     {
       "id": "HJ-4009",
       "code": "HJ-4009",
       "desc": "Alloy body Ceramic cartridge Single Cold",
+      "type": "面盆龙头",
       "price": 80
     },
     {
       "id": "HJ-4010",
       "code": "HJ-4010",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "面盆龙头",
       "price": 60
     },
     {
       "id": "HJ-4011",
       "code": "HJ-4011",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "面盆龙头",
       "price": 80
     },
     {
       "id": "HJ-6001",
       "code": "HJ-6001",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 125
     },
     {
       "id": "HJ-6002",
       "code": "HJ-6002",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 145
     },
     {
       "id": "HJ-6003",
       "code": "HJ-6003",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 190
     },
     {
       "id": "HJ-6004",
       "code": "HJ-6004",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 220
     },
     {
       "id": "HJ-6005",
       "code": "HJ-6005",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 210
     },
     {
       "id": "HJ-6006",
       "code": "HJ-6006",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 180
     },
     {
       "id": "HJ-6007",
       "code": "HJ-6007",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 190
     },
     {
       "id": "HJ-6008",
       "code": "HJ-6008",
       "desc": "Stainless steel body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "冷热龙头",
       "price": 210
     },
     {
       "id": "HJ-3001",
       "code": "HJ-3001",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 20
     },
     {
       "id": "HJ-3002",
       "code": "HJ-3002",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 55
     },
     {
       "id": "HJ-3003",
       "code": "HJ-3003",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 60
     },
     {
       "id": "HJ-3004",
       "code": "HJ-3004",
       "desc": "Stainless steel body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 60
     },
     {
       "id": "HJ-3005",
       "code": "HJ-3005",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 60
     },
     {
       "id": "HJ-3006",
       "code": "HJ-3006",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 35
     },
     {
       "id": "HJ-3007",
       "code": "HJ-3007",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 60
     },
     {
       "id": "HJ-3008",
       "code": "HJ-3008",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 75
     },
     {
       "id": "HJ-3009",
       "code": "HJ-3009",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 55
     },
     {
       "id": "HJ-3010",
       "code": "HJ-3010",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 60
     },
     {
       "id": "HJ-3011",
       "code": "HJ-3011",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 0
     },
     {
       "id": "HJ-3012",
       "code": "HJ-3012",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 75
     },
     {
       "id": "HJ-3013",
       "code": "HJ-3013",
       "desc": "Alloy body Ceramic cartridge ABS handle Single Cold",
+      "type": "单冷龙头",
       "price": 0
     },
     {
       "id": "HJ-1001",
       "code": "HJ-1001",
       "desc": "Stainless steel body Ceramic cartridge ABS handwheel Cold only",
+      "type": "手轮龙头",
       "price": 13
     },
     {
       "id": "HJ-1002",
       "code": "HJ-1002",
       "desc": "Brushed Stainless steel body Ceramic cartridge Stainless steel handwheel Cold only",
+      "type": "手轮龙头",
       "price": 20
     },
     {
       "id": "HJ-1003",
       "code": "HJ-1003",
       "desc": "Brushed Stainless steel body Ceramic cartridge ABS handwheel Cold only",
+      "type": "手轮龙头",
       "price": 26
     },
     {
       "id": "HJ-7001",
       "code": "HJ-7001",
       "desc": "Stainless steel body Ceramic cartridge ABS hand Cold only",
+      "type": "花洒龙头",
       "price": 100
     },
     {
       "id": "HJ-7002",
       "code": "HJ-7002",
       "desc": "Stainless steel body Ceramic cartridge ABS hand Cold only",
+      "type": "花洒龙头",
       "price": 30
     },
     {
       "id": "HJ-7003",
       "code": "HJ-7003",
       "desc": "Stainless steel body Ceramic cartridge ABS hand Cold only",
+      "type": "花洒龙头",
       "price": 30
     },
     {
       "id": "HJ-7004",
       "code": "HJ-7004",
       "desc": "Stainless steel body Ceramic cartridge ABS hand Cold only",
+      "type": "花洒龙头",
       "price": 60
     },
     {
       "id": "HJ-5550",
       "code": "HJ-5550",
       "desc": "Double rod",
+      "type": "厨房龙头",
       "price": 55
     },
     {
       "id": "HJ-5551",
       "code": "HJ-5551",
       "desc": "Single rod",
+      "type": "厨房龙头",
       "price": 45
     },
     {
       "id": "HJ-5552",
       "code": "HJ-5552",
       "desc": "Toilet brush",
+      "type": "厨房龙头",
       "price": 35
     },
     {
       "id": "HJ-5553",
       "code": "HJ-5553",
       "desc": "Stainless steel 201",
+      "type": "厨房龙头",
       "price": 35
     },
     {
       "id": "HJ-5554",
       "code": "HJ-5554",
       "desc": "",
+      "type": "厨房龙头",
       "price": 0
     },
     {
       "id": "HJ-9001",
       "code": "HJ-9001",
       "desc": "Stainless steel fittings ABS drain pipe",
+      "type": "下水配件",
       "price": 28
     },
     {
       "id": "HJ-9002",
       "code": "HJ-9002",
       "desc": "Odor-proof",
+      "type": "下水配件",
       "price": 35
     },
     {
       "id": "HJ-9003",
       "code": "HJ-9003",
       "desc": "",
+      "type": "下水配件",
       "price": 0
     },
     {
       "id": "HJ-7701",
       "code": "HJ-7701",
       "desc": "Black tube 40cm",
+      "type": "软管",
       "price": 7
     },
     {
-      "id": "HJ-7701",
+      "id": "HJ-7701-R60",
       "code": "HJ-7701",
       "desc": "Black tube 60cm",
+      "type": "软管",
       "price": 10
     },
     {
-      "id": "HJ-7701",
+      "id": "HJ-7701-R61",
       "code": "HJ-7701",
       "desc": "Black tube 80cm",
+      "type": "软管",
       "price": 12
     },
     {
       "id": "HJ-8001",
       "code": "HJ-8001",
       "desc": "Product size：10*10*3.6 Stainless steel 201 Sigle",
+      "type": "不锈钢件",
       "price": 35
     },
     {
       "id": "HJ-8002",
       "code": "HJ-8002",
       "desc": "Product size：10*10*3.6 Stainless steel 201 Double",
+      "type": "不锈钢件",
       "price": 35
     },
     {
       "id": "HJ-8003",
       "code": "HJ-8003",
       "desc": "Stainless steel 201",
+      "type": "不锈钢件",
       "price": 35
     },
     {
       "id": "HJ-8004",
       "code": "HJ-8004",
       "desc": "Stainless steel",
+      "type": "不锈钢件",
       "price": 25
     },
     {
       "id": "HJ-8005",
       "code": "HJ-8005",
       "desc": "Stainless steel",
+      "type": "不锈钢件",
       "price": 50
     },
     {
       "id": "HJ-8621",
       "code": "HJ-8621",
       "desc": "ABS shower head Stainless steel tube",
+      "type": "淋浴管",
       "price": 45
     },
     {
       "id": "HJ-8622",
       "code": "HJ-8622",
       "desc": "ABS shower head Stainless steel tube",
+      "type": "淋浴管",
       "price": 45
     },
     {
       "id": "HJ-8623",
       "code": "HJ-8623",
       "desc": "Shower tube",
+      "type": "淋浴管",
       "price": 25
     },
     {
       "id": "HJ-8624",
       "code": "HJ-8624",
       "desc": "Shower tube",
+      "type": "淋浴管",
       "price": 25
     },
     {
       "id": "HJ-2001",
       "code": "HJ-2001",
       "desc": "Brass body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "淋浴套装",
       "price": 245
     },
     {
       "id": "HJ-2002",
       "code": "HJ-2002",
       "desc": "Brass body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "淋浴套装",
       "price": 290
     },
     {
       "id": "HJ-2002A",
       "code": "HJ-2002A",
       "desc": "Brass body Ceramic cartridge Alloy handle Hot and cold",
+      "type": "淋浴套装",
       "price": 290
     },
     {
       "id": "HJ-2003",
       "code": "HJ-2003",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 320
     },
     {
       "id": "HJ-2003A",
       "code": "HJ-2003A",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 320
     },
     {
       "id": "HJ-2004",
       "code": "HJ-2004",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 350
     },
     {
       "id": "HJ-2004A",
       "code": "HJ-2004A",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 350
     },
     {
       "id": "HJ-2009",
       "code": "HJ-2009",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 650
     },
     {
       "id": "HJ-2010",
       "code": "HJ-2010",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 500
     },
     {
       "id": "HJ-2011",
       "code": "HJ-2011",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 550
     },
     {
       "id": "HJ-2012",
       "code": "HJ-2012",
       "desc": "Space aluminum body Ceramic cartridge Space aluminum handle",
+      "type": "淋浴套装",
       "price": 500
     },
     {
       "id": "HJ-2005",
       "code": "HJ-2005",
       "desc": "Instant electric water heater",
+      "type": "即热",
       "price": 600
     },
     {
       "id": "HJ-2006",
       "code": "HJ-2006",
       "desc": "Instant electric water heater",
+      "type": "即热",
       "price": 600
     }
   ],
@@ -676,6 +783,7 @@
       "model": "V8-80",
       "name": "V8-80",
       "spec": "",
+      "type": "浴室柜",
       "price": 1020
     },
     {
@@ -683,13 +791,15 @@
       "model": "A50-80",
       "name": "A50-80",
       "spec": "",
+      "type": "浴室柜",
       "price": 1020
     },
     {
       "id": "YC-3",
       "model": "J2-60-80",
       "name": "J2-60-80",
-      "spec": "",
+      "spec": "60：800  80：1020",
+      "type": "浴室柜",
       "price": 0
     },
     {
@@ -697,6 +807,7 @@
       "model": "D9-80",
       "name": "D9-80",
       "spec": "",
+      "type": "浴室柜",
       "price": 1020
     },
     {
@@ -704,6 +815,7 @@
       "model": "43-华夏古橡",
       "name": "43-华夏古橡",
       "spec": "",
+      "type": "浴室柜",
       "price": 480
     },
     {
@@ -711,6 +823,7 @@
       "model": "D2-60双色门",
       "name": "D2-60双色门",
       "spec": "",
+      "type": "浴室柜",
       "price": 800
     },
     {
@@ -718,6 +831,7 @@
       "model": "D6-60",
       "name": "D6-60",
       "spec": "",
+      "type": "浴室柜",
       "price": 800
     },
     {
@@ -725,13 +839,15 @@
       "model": "4335支架（黑.白）4335B/W",
       "name": "4335支架（黑.白）4335B/W",
       "spec": "",
+      "type": "支架",
       "price": 350
     },
     {
       "id": "YC-9",
-      "model": "43-白浪  ",
-      "name": "43-白浪  ",
+      "model": "43-白浪",
+      "name": "43-白浪",
       "spec": "",
+      "type": "浴室柜",
       "price": 480
     },
     {
@@ -739,6 +855,7 @@
       "model": "D60-SK天空蓝",
       "name": "D60-SK天空蓝",
       "spec": "",
+      "type": "浴室柜",
       "price": 800
     },
     {
@@ -746,6 +863,7 @@
       "model": "43-豆沙绿",
       "name": "43-豆沙绿",
       "spec": "",
+      "type": "浴室柜",
       "price": 480
     },
     {
@@ -753,6 +871,7 @@
       "model": "D3-60圆镜",
       "name": "D3-60圆镜",
       "spec": "特价引流款",
+      "type": "浴室柜",
       "price": 750
     },
     {
@@ -760,6 +879,7 @@
       "model": "43-水泥灰",
       "name": "43-水泥灰",
       "spec": "",
+      "type": "浴室柜",
       "price": 480
     }
   ]

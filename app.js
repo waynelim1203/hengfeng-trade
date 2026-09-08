@@ -10,12 +10,18 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  /* ---------- 根据产品分类生成图片路径 ---------- */
+  /* ---------- 根据产品分类生成图片路径（支持.png和.jpeg） ---------- */
   function getImagePath(item, category) {
     const folder = category; // toilet / faucet / cabinet
-    // 尝试常见扩展名
-    const id = item.id;
+    const id = item.id.replace(/-R\d+$/, ''); // Remove duplicate suffix
     return `images/${folder}/${folder}_${id}.png`;
+  }
+
+  /* ---------- 尝试加载图片（自动尝试.png和.jpeg） ---------- */
+  function buildImgHtml(alt, category, id) {
+    const cleanId = id.replace(/-R\d+$/, '');
+    const basePath = `images/${category}/${category}_${cleanId}`;
+    return `<img src="${basePath}.png" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${basePath}.jpeg';if(this.src.indexOf('.jpeg')>0){this.onerror=function(){this.parentElement.innerHTML='<div class=\\'img-placeholder\\'><span>📷</span></div>'}}">`;
   }
 
   /* ---------- 当前状态 ---------- */
@@ -33,13 +39,13 @@
 
   /* ========== 产品卡片 ========== */
   function buildCard(item, category) {
-    const imagePath = getImagePath(item, category);
     const name = item.name || item.desc || item.model || '';
     const spec = item.spec ? `<div class="product-spec">${item.spec}</div>` : '';
+    const imgHtml = buildImgHtml(name, category, item.id);
 
     return `
       <div class="product-card" data-id="${item.id}" data-category="${category}" data-type="${item.type || ''}">
-        <div class="product-img"><img src="${imagePath}" alt="${name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>📷</span></div>'"></div>
+        <div class="product-img">${imgHtml}</div>
         <div class="product-info">
           <div class="product-name">${name}</div>
           ${spec}
@@ -98,10 +104,7 @@
 
     scroll.innerHTML = featured.map(({ item, category }) => {
       const name = item.name || item.desc || item.model || '';
-      const imagePath = getImagePath(item, category);
-      const imgHtml = item.image || true
-        ? `<img src="${imagePath}" alt="${name}" loading="lazy" onerror="this.parentElement.innerHTML='📷'">`
-        : '📷';
+      const imgHtml = buildImgHtml(name, category, item.id);
       return `
         <div class="featured-item" data-id="${item.id}" data-category="${category}">
           <div class="featured-item-img">${imgHtml}</div>
@@ -135,8 +138,7 @@
     const isFaucet = category === 'faucet';
     const name = item.name || item.desc || '';
     const title = isFaucet ? `${item.code} - ${name}` : name;
-    const imagePath = getImagePath(item, category);
-    const imgHtml = `<div class="detail-img"><img src="${imagePath}" alt="${name}" onerror="this.parentElement.innerHTML='📷'"></div>`;
+    const imgHtml = `<div class="detail-img">${buildImgHtml(name, category, item.id)}</div>`;
 
     content.innerHTML = `
       <h2 class="detail-title">${title}</h2>
