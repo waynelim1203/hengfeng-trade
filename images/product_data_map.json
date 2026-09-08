@@ -12,49 +12,49 @@
     "spec": "250mm"
   },
   "TU-8": {
-    "image": "images/toilet/toilet_TU-8.png",
+    "image": "images/toilet/toilet_TU-8.jpeg",
     "model": "2006",
     "name": "分体马桶横排S/地排P",
     "spec": "250mm"
   },
   "TU-9": {
-    "image": "images/toilet/toilet_TU-9.png",
+    "image": "images/toilet/toilet_TU-9.jpeg",
     "model": "2007",
     "name": "分体马桶地排s/墙排p",
     "spec": "250mm"
   },
   "TU-11": {
-    "image": "images/toilet/toilet_TU-11.png",
+    "image": "images/toilet/toilet_TU-11.jpeg",
     "model": "2009",
     "name": "澳洲分体马桶地排S/墙排P",
     "spec": ""
   },
   "TU-10": {
-    "image": "images/toilet/toilet_TU-10.png",
+    "image": "images/toilet/toilet_TU-10.jpeg",
     "model": "2008",
     "name": "澳洲分体马桶地排s/墙排p",
     "spec": ""
   },
   "TU-20": {
-    "image": "images/toilet/toilet_TU-20.png",
+    "image": "images/toilet/toilet_TU-20.jpeg",
     "model": "4007",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-21": {
-    "image": "images/toilet/toilet_TU-21.png",
+    "image": "images/toilet/toilet_TU-21.jpeg",
     "model": "4008",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-27": {
-    "image": "images/toilet/toilet_TU-27.png",
+    "image": "images/toilet/toilet_TU-27.jpeg",
     "model": "C003",
     "name": "蹲便器",
     "spec": ""
   },
   "TU-4": {
-    "image": "images/toilet/toilet_TU-4.png",
+    "image": "images/toilet/toilet_TU-4.jpeg",
     "model": "2002",
     "name": "澳洲分体马桶\n地排S接头/墙排p接头",
     "spec": ""
@@ -66,7 +66,7 @@
     "spec": ""
   },
   "TU-7": {
-    "image": "images/toilet/toilet_TU-7.jpeg",
+    "image": "images/toilet/toilet_TU-7.png",
     "model": "2005",
     "name": "分体马桶地排S",
     "spec": ""
@@ -78,43 +78,43 @@
     "spec": ""
   },
   "TU-16": {
-    "image": "images/toilet/toilet_TU-16.jpeg",
+    "image": "images/toilet/toilet_TU-16.png",
     "model": "4001",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-17": {
-    "image": "images/toilet/toilet_TU-17.jpeg",
+    "image": "images/toilet/toilet_TU-17.png",
     "model": "4002",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-18": {
-    "image": "images/toilet/toilet_TU-18.jpeg",
+    "image": "images/toilet/toilet_TU-18.png",
     "model": "4005",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-19": {
-    "image": "images/toilet/toilet_TU-19.jpeg",
+    "image": "images/toilet/toilet_TU-19.png",
     "model": "4006",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-22": {
-    "image": "images/toilet/toilet_TU-22.jpeg",
+    "image": "images/toilet/toilet_TU-22.png",
     "model": "4009",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-23": {
-    "image": "images/toilet/toilet_TU-23.jpeg",
+    "image": "images/toilet/toilet_TU-23.png",
     "model": "4010",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-24": {
-    "image": "images/toilet/toilet_TU-24.jpeg",
+    "image": "images/toilet/toilet_TU-24.png",
     "model": "4011",
     "name": "立柱盆",
     "spec": ""
@@ -587,18 +587,6 @@
     "name": "\nStainless steel body\nCeramic cartridge\nStainless steel handle\nHot and cold",
     "spec": ""
   },
-  "HJ-5011": {
-    "image": "images/faucet/faucet_HJ-5011.png",
-    "model": "HJ-5011",
-    "name": "\nStainless steel body\nCeramic cartridge\nStainless steel handle\nHot and cold",
-    "spec": ""
-  },
-  "HJ-5010": {
-    "image": "images/faucet/faucet_HJ-5010.png",
-    "model": "HJ-5010",
-    "name": "\nStainless steel body\nCeramic cartridge\nStainless steel handle\nHot and cold",
-    "spec": ""
-  },
   "YC-10": {
     "image": "images/cabinet/cabinet_YC-10.png",
     "model": "D60-SK天空蓝",
@@ -618,7 +606,7 @@
     "spec": ""
   },
   "YC-7": {
-    "image": "images/cabinet/cabinet_YC-7.png",
+    "image": "images/cabinet/cabinet_YC-7.jpeg",
     "model": "D6-60",
     "name": "D6-60",
     "spec": ""
@@ -660,7 +648,7 @@
     "spec": ""
   },
   "YC-13": {
-    "image": "images/cabinet/cabinet_YC-13.jpeg",
+    "image": "images/cabinet/cabinet_YC-13.png",
     "model": "43-水泥灰",
     "name": "43-水泥灰",
     "spec": ""
