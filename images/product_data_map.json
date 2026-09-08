@@ -1,6 +1,6 @@
 {
   "TU-3": {
-    "image": "images/toilet/toilet_TU-3",
+    "image": "images/toilet/toilet_TU-3.png",
     "model": "2001",
     "name": "分体马桶地排s",
     "spec": "250mm"
@@ -18,43 +18,43 @@
     "spec": "250mm"
   },
   "TU-9": {
-    "image": "images/toilet/toilet_TU-9.jpeg",
+    "image": "images/toilet/toilet_TU-9.png",
     "model": "2007",
     "name": "分体马桶地排s/墙排p",
     "spec": "250mm"
   },
   "TU-11": {
-    "image": "images/toilet/toilet_TU-11.jpeg",
+    "image": "images/toilet/toilet_TU-11.png",
     "model": "2009",
     "name": "澳洲分体马桶地排S/墙排P",
     "spec": ""
   },
   "TU-10": {
-    "image": "images/toilet/toilet_TU-10.jpeg",
+    "image": "images/toilet/toilet_TU-10.png",
     "model": "2008",
     "name": "澳洲分体马桶地排s/墙排p",
     "spec": ""
   },
   "TU-20": {
-    "image": "images/toilet/toilet_TU-20.jpeg",
+    "image": "images/toilet/toilet_TU-20.png",
     "model": "4007",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-21": {
-    "image": "images/toilet/toilet_TU-21.jpeg",
+    "image": "images/toilet/toilet_TU-21.png",
     "model": "4008",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-27": {
-    "image": "images/toilet/toilet_TU-27.jpeg",
+    "image": "images/toilet/toilet_TU-27.png",
     "model": "C003",
     "name": "蹲便器",
     "spec": ""
   },
   "TU-4": {
-    "image": "images/toilet/toilet_TU-4.jpeg",
+    "image": "images/toilet/toilet_TU-4.png",
     "model": "2002",
     "name": "澳洲分体马桶\n地排S接头/墙排p接头",
     "spec": ""
@@ -72,7 +72,7 @@
     "spec": ""
   },
   "TU-12": {
-    "image": "images/toilet/toilet_TU-12.png",
+    "image": "images/toilet/toilet_TU-12.jpeg",
     "model": "2010",
     "name": "澳洲分体马桶地排S/墙排P",
     "spec": ""
@@ -84,37 +84,37 @@
     "spec": ""
   },
   "TU-17": {
-    "image": "images/toilet/toilet_TU-17.png",
+    "image": "images/toilet/toilet_TU-17.jpeg",
     "model": "4002",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-18": {
-    "image": "images/toilet/toilet_TU-18.png",
+    "image": "images/toilet/toilet_TU-18.jpeg",
     "model": "4005",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-19": {
-    "image": "images/toilet/toilet_TU-19.png",
+    "image": "images/toilet/toilet_TU-19.jpeg",
     "model": "4006",
     "name": "立柱盆 ",
     "spec": ""
   },
   "TU-22": {
-    "image": "images/toilet/toilet_TU-22.png",
+    "image": "images/toilet/toilet_TU-22.jpeg",
     "model": "4009",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-23": {
-    "image": "images/toilet/toilet_TU-23.png",
+    "image": "images/toilet/toilet_TU-23.jpeg",
     "model": "4010",
     "name": "立柱盆",
     "spec": ""
   },
   "TU-24": {
-    "image": "images/toilet/toilet_TU-24.png",
+    "image": "images/toilet/toilet_TU-24.jpeg",
     "model": "4011",
     "name": "立柱盆",
     "spec": ""
@@ -624,7 +624,7 @@
     "spec": ""
   },
   "YC-8": {
-    "image": "images/cabinet/cabinet_YC-8.jpeg",
+    "image": "images/cabinet/cabinet_YC-8.png",
     "model": "4335支架（黑.白）4335B/W",
     "name": "4335支架（黑.白）4335B/W",
     "spec": ""
@@ -660,7 +660,7 @@
     "spec": ""
   },
   "YC-13": {
-    "image": "images/cabinet/cabinet_YC-13.png",
+    "image": "images/cabinet/cabinet_YC-13.jpeg",
     "model": "43-水泥灰",
     "name": "43-水泥灰",
     "spec": ""
