@@ -10,18 +10,22 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  /* ---------- 根据产品分类生成图片路径（支持.png和.jpeg） ---------- */
+  /* ---------- 图片路径映射（从 products.json 中读取） ---------- */
   function getImagePath(item, category) {
-    const folder = category; // toilet / faucet / cabinet
-    const id = item.id.replace(/-R\d+$/, ''); // Remove duplicate suffix
-    return `images/${folder}/${folder}_${id}.png`;
+    // 使用 products.json 中预先生成的 image 字段
+    if (item.image) {
+      return item.image;
+    }
+    // 回退：按约定路径
+    const id = item.id.replace(/-R\d+$/, '');
+    return 'images/' + category + '/' + category + '_' + id + '.png';
   }
 
-  /* ---------- 尝试加载图片（自动尝试.png和.jpeg） ---------- */
+  /* ---------- 构建图片 HTML（自动尝试 .png 和 .jpeg） ---------- */
   function buildImgHtml(alt, category, id) {
     const cleanId = id.replace(/-R\d+$/, '');
-    const basePath = `images/${category}/${category}_${cleanId}`;
-    return `<img src="${basePath}.png" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${basePath}.jpeg';if(this.src.indexOf('.jpeg')>0){this.onerror=function(){this.parentElement.innerHTML='<div class=\\'img-placeholder\\'><span>📷</span></div>'}}">`;
+    const basePath = 'images/' + category + '/' + category + '_' + cleanId;
+    return '<img src="' + basePath + '.png" alt="' + alt + '" loading="lazy" onerror="loadImageFallback(this, \'' + basePath + '\')">';
   }
 
   /* ---------- 当前状态 ---------- */
@@ -32,7 +36,7 @@
   function switchPage(page) {
     currentPage = page;
     $$('.page').forEach(p => p.classList.remove('active'));
-    $(`#page${page.charAt(0).toUpperCase() + page.slice(1)}`).classList.add('active');
+    $('#page' + page.charAt(0).toUpperCase() + page.slice(1)).classList.add('active');
     $$('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.nav === page));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -40,17 +44,16 @@
   /* ========== 产品卡片 ========== */
   function buildCard(item, category) {
     const name = item.name || item.desc || item.model || '';
-    const spec = item.spec ? `<div class="product-spec">${item.spec}</div>` : '';
+    const spec = item.spec ? '<div class="product-spec">' + item.spec + '</div>' : '';
     const imgHtml = buildImgHtml(name, category, item.id);
 
-    return `
-      <div class="product-card" data-id="${item.id}" data-category="${category}" data-type="${item.type || ''}">
-        <div class="product-img">${imgHtml}</div>
-        <div class="product-info">
-          <div class="product-name">${name}</div>
-          ${spec}
-        </div>
-      </div>`;
+    return '<div class="product-card" data-id="' + item.id + '" data-category="' + category + '" data-type="' + (item.type || '') + '">' +
+      '<div class="product-img">' + imgHtml + '</div>' +
+      '<div class="product-info">' +
+        '<div class="product-name">' + name + '</div>' +
+        spec +
+      '</div>' +
+    '</div>';
   }
 
   /* ========== 渲染产品列表 ========== */
@@ -105,13 +108,12 @@
     scroll.innerHTML = featured.map(({ item, category }) => {
       const name = item.name || item.desc || item.model || '';
       const imgHtml = buildImgHtml(name, category, item.id);
-      return `
-        <div class="featured-item" data-id="${item.id}" data-category="${category}">
-          <div class="featured-item-img">${imgHtml}</div>
-          <div class="featured-item-info">
-            <div class="featured-item-name">${name}</div>
-          </div>
-        </div>`;
+      return '<div class="featured-item" data-id="' + item.id + '" data-category="' + category + '">' +
+        '<div class="featured-item-img">' + imgHtml + '</div>' +
+        '<div class="featured-item-info">' +
+          '<div class="featured-item-name">' + name + '</div>' +
+        '</div>' +
+      '</div>';
     }).join('');
 
     // 点击精选产品
@@ -137,24 +139,22 @@
 
     const isFaucet = category === 'faucet';
     const name = item.name || item.desc || '';
-    const title = isFaucet ? `${item.code} - ${name}` : name;
-    const imgHtml = `<div class="detail-img">${buildImgHtml(name, category, item.id)}</div>`;
+    const title = isFaucet ? item.code + ' - ' + name : name;
+    const imgHtml = '<div class="detail-img">' + buildImgHtml(name, category, item.id) + '</div>';
 
-    content.innerHTML = `
-      <h2 class="detail-title">${title}</h2>
-      ${item.code ? `<p class="detail-code">产品编号：${item.code}</p>` : ''}
-      ${item.model ? `<p class="detail-code">产品型号：${item.model}</p>` : ''}
-      ${imgHtml}
-      <table class="detail-table">
-        ${item.type ? `<tr><td>分类</td><td>${item.type}</td></tr>` : ''}
-        ${item.spec ? `<tr><td>规格</td><td>${item.spec}</td></tr>` : ''}
-      </table>
-      <h3 class="detail-section-title">产品描述</h3>
-      <ul class="detail-list">
-        ${isFaucet ? `<li>${item.desc}</li>` : `<li>${name}</li>`}
-        <li>请联系我们获取详细技术资料与报价</li>
-      </ul>
-    `;
+    content.innerHTML = '<h2 class="detail-title">' + title + '</h2>' +
+      (item.code ? '<p class="detail-code">产品编号：' + item.code + '</p>' : '') +
+      (item.model ? '<p class="detail-code">产品型号：' + item.model + '</p>' : '') +
+      imgHtml +
+      '<table class="detail-table">' +
+        (item.type ? '<tr><td>分类</td><td>' + item.type + '</td></tr>' : '') +
+        (item.spec ? '<tr><td>规格</td><td>' + item.spec + '</td></tr>' : '') +
+      '</table>' +
+      '<h3 class="detail-section-title">产品描述</h3>' +
+      '<ul class="detail-list">' +
+        '<li>' + (isFaucet ? item.desc : name) + '</li>' +
+        '<li>请联系我们获取详细技术资料与报价</li>' +
+      '</ul>';
 
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
