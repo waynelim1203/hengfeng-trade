@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>恒峰贸易 - 产品图册</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ========== 首页 ========== -->
+  <main class="page page-home active" id="pageHome">
+    <!-- Hero 区域 -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/hero/hero-showroom_001.jpg" alt="展厅" onerror="this.style.display='none'">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-brand">
+          <span class="brand-logo">恒</span>
+          <span class="brand-name">恒峰贸易</span>
+        </div>
+        <h1 class="hero-title">全产业源头工厂直供</h1>
+        <p class="hero-subtitle">20年专注 · 品质铸就信赖</p>
+        <a href="#pageCatalog" class="hero-cta" data-nav="catalog">
+          <span>浏览产品</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>向下滚动</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="advantages">
+      <div class="container">
+        <h2 class="section-title">核心优势</h2>
+        <div class="advantage-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="24" cy="24" r="20"/>
+                <path d="M16 24l6 6 10-12"/>
+              </svg>
+            </div>
+            <h3>全产业链</h3>
+            <p>注塑·冲压·电子·模具·机加工 全自有生产</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M24 4l6 12 14 2-10 10 2 14-12-6-12 6 2-14-10-10 14-2z"/>
+              </svg>
+            </div>
+            <h3>品质保证</h3>
+            <p>严格品控体系 拒绝外协拼装</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="8" y="16" width="32" height="24" rx="2"/>
+                <path d="M8 24h32M16 16V8h16v8"/>
+              </svg>
+            </div>
+            <h3>工厂直供</h3>
+            <p>源头价格 让利客户</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选产品 -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">精选产品</h2>
+          <a href="#pageCatalog" class="view-all" data-nav="catalog">查看全部 →</a>
+        </div>
+        <div class="featured-scroll" id="featuredScroll">
+          <!-- 精选产品由 JS 动态生成 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about">
+      <div class="about-bg">
+        <img src="images/hero/factory_001.jpg" alt="工厂" onerror="this.style.display='none'">
+        <div class="about-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title light">关于恒峰</h2>
+          <p class="about-text">
+            恒峰贸易深耕卫浴行业20年，拥有完整的全产业链制造体系。
+            从注塑、冲压到电子、模具、机加工，全部自主生产，
+            确保每一件产品的卓越品质。
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">年行业经验</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100+</span>
+              <span class="stat-label">款产品</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">国家出口</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="contact">
+      <div class="container">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2a20 20 0 0 0-20 20c0 11 9 20 20 20s20-9 20-20A20 20 0 0 0 22 2z"/>
+              <path d="M22 12v10l6 4"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-label">咨询热线</p>
+            <a href="tel:0505688888" class="contact-phone">0505688888</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 产品页 ========== -->
+  <main class="page page-catalog" id="pageCatalog">
+    <!-- 顶部标题栏 -->
+    <header class="catalog-header">
+      <div class="container">
+        <h1 class="catalog-title">产品中心</h1>
+        <p class="catalog-subtitle">浏览我们的全系列产品</p>
+      </div>
+    </header>
+
+    <!-- 分类 Tab -->
+    <nav class="catalog-tabs">
+      <div class="tabs-scroll">
+        <button class="tab-btn active" data-category="all">全部</button>
+        <button class="tab-btn" data-category="toilet">马桶</button>
+        <button class="tab-btn" data-category="faucet">龙头</button>
+        <button class="tab-btn" data-category="cabinet">浴室柜</button>
+        <button class="tab-btn" data-category="shower">淋浴</button>
+      </div>
+    </nav>
+
+    <!-- 产品列表 -->
+    <section class="catalog-products">
+      <div class="container">
+        <div class="product-grid" id="productGrid">
+          <!-- 产品卡片由 JS 动态生成 -->
+        </div>
+        <div class="empty-tip" id="emptyTip" style="display:none;">
+          <p>暂无产品数据</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 底部导航 ========== -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-nav="home">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span class="nav-label">首页</span>
+    </button>
+    <button class="nav-item" data-nav="catalog">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"/>
+        <rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      <span class="nav-label">产品</span>
+    </button>
+  </nav>
+
+  <!-- ========== 浮动致电按钮 ========== -->
+  <a href="tel:0505688888" class="float-call" aria-label="致电">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+  </a>
+
+  <!-- ========== 产品详情弹窗 ========== -->
+  <div class="modal" id="productModal">
+    <div class="modal-mask"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- 详情内容由 JS 动态生成 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
