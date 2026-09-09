@@ -5,3 +5,9 @@ node_modules
 *.xlsx
 Screenshots*
 .claude/*
+_fix_conflict.py
+_fix_conflict2.py
+_verify_missing_result.txt
+_verify_missing.py
+_verify_missing2.py
+extract.py

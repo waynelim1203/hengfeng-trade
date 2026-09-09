@@ -1,9 +1,10 @@
-function loadImageFallback(img, basePath) {
-  // First fallback: try .jpeg
-  if (img.src.indexOf('.png') > -1) {
-    img.src = basePath + '.jpeg';
+// Image fallback handler
+function loadImageFallback(img) {
+  // If current src is .png, try .jpeg
+  if (img.src.match(/\.png$/)) {
+    img.src = img.src.replace('.png', '.jpeg');
   } else {
-    // Final fallback: show placeholder
+    // Show placeholder
     img.parentElement.innerHTML = '<div class="img-placeholder"><span>📷</span></div>';
   }
 }

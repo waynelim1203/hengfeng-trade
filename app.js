@@ -3,29 +3,24 @@
 ;(function () {
   'use strict';
 
-  /* ---------- 产品数据（从 products.json 加载） ---------- */
-  let PRODUCTS = {};
+  /* ---------- 产品数据（从 products.js 加载） ---------- */
+  // PRODUCTS is declared in products.js
 
   /* ---------- 工具函数 ---------- */
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  /* ---------- 图片路径映射（从 products.json 中读取） ---------- */
-  function getImagePath(item, category) {
-    // 使用 products.json 中预先生成的 image 字段
-    if (item.image) {
-      return item.image;
+  /* ---------- 构建图片 HTML ---------- */
+  function buildImgHtml(item, category) {
+    // 使用 products.json 中的 image 字段
+    var imagePath = item.image;
+    if (!imagePath) {
+      // 回退：按约定路径
+      var id = item.id.replace(/-R\d+$/, '');
+      imagePath = 'images/' + category + '/' + category + '_' + id + '.png';
     }
-    // 回退：按约定路径
-    const id = item.id.replace(/-R\d+$/, '');
-    return 'images/' + category + '/' + category + '_' + id + '.png';
-  }
-
-  /* ---------- 构建图片 HTML（自动尝试 .png 和 .jpeg） ---------- */
-  function buildImgHtml(alt, category, id) {
-    const cleanId = id.replace(/-R\d+$/, '');
-    const basePath = 'images/' + category + '/' + category + '_' + cleanId;
-    return '<img src="' + basePath + '.png" alt="' + alt + '" loading="lazy" onerror="loadImageFallback(this, \'' + basePath + '\')">';
+    var alt = item.name || item.desc || item.model || '';
+    return '<img src="' + imagePath + '" alt="' + alt + '" loading="lazy" onerror="loadImageFallback(this)">';
   }
 
   /* ---------- 当前状态 ---------- */
@@ -43,9 +38,9 @@
 
   /* ========== 产品卡片 ========== */
   function buildCard(item, category) {
-    const name = item.name || item.desc || item.model || '';
-    const spec = item.spec ? '<div class="product-spec">' + item.spec + '</div>' : '';
-    const imgHtml = buildImgHtml(name, category, item.id);
+    var name = item.name || item.desc || item.model || '';
+    var spec = item.spec ? '<div class="product-spec">' + item.spec + '</div>' : '';
+    var imgHtml = buildImgHtml(item, category);
 
     return '<div class="product-card" data-id="' + item.id + '" data-category="' + category + '" data-type="' + (item.type || '') + '">' +
       '<div class="product-img">' + imgHtml + '</div>' +
@@ -107,7 +102,7 @@
 
     scroll.innerHTML = featured.map(({ item, category }) => {
       const name = item.name || item.desc || item.model || '';
-      const imgHtml = buildImgHtml(name, category, item.id);
+      const imgHtml = buildImgHtml(item, category);
       return '<div class="featured-item" data-id="' + item.id + '" data-category="' + category + '">' +
         '<div class="featured-item-img">' + imgHtml + '</div>' +
         '<div class="featured-item-info">' +
@@ -140,7 +135,7 @@
     const isFaucet = category === 'faucet';
     const name = item.name || item.desc || '';
     const title = isFaucet ? item.code + ' - ' + name : name;
-    const imgHtml = '<div class="detail-img">' + buildImgHtml(name, category, item.id) + '</div>';
+    const imgHtml = '<div class="detail-img">' + buildImgHtml(item, category) + '</div>';
 
     content.innerHTML = '<h2 class="detail-title">' + title + '</h2>' +
       (item.code ? '<p class="detail-code">产品编号：' + item.code + '</p>' : '') +
@@ -216,14 +211,8 @@
   }
 
   /* ========== 初始化 ========== */
-  async function init() {
-    // 从 products.json 加载产品数据
-    try {
-      const response = await fetch('products.json');
-      PRODUCTS = await response.json();
-    } catch (e) {
-      console.error('Failed to load products.json:', e);
-    }
+  function init() {
+    // PRODUCTS is loaded from products.js via <script> tag
     renderProducts();
     renderFeatured();
     bindEvents();
