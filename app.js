@@ -3,29 +3,67 @@
 ;(function () {
   'use strict';
 
-  /* ---------- 产品数据（从 products.js 加载） ---------- */
-  // PRODUCTS is declared in products.js
-
   /* ---------- 工具函数 ---------- */
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
+  /* ---------- 当前状态 ---------- */
+  let currentCategory = 'all';
+  let currentPage = 'home';
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  /* ---------- 获取当前语言的产品数据 ---------- */
+  function getProducts() {
+    return currentLang === 'en' ? (typeof PRODUCTS_EN !== 'undefined' ? PRODUCTS_EN : PRODUCTS) : PRODUCTS;
+  }
+
+  /* ---------- i18n 翻译 ---------- */
+  function t(key) {
+    const dict = I18N[currentLang] || I18N.zh;
+    return dict[key] || key;
+  }
+
+  /* ---------- 应用语言到所有 data-i18n 元素 ---------- */
+  function applyLang() {
+    // 更新 html lang 属性
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
+    // 更新所有带 data-i18n 的元素
+    $$('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      const text = t(key);
+      if (text) el.textContent = text;
+    });
+
+    // 更新语言切换按钮状态
+    $$('.lang-item').forEach(item => {
+      item.classList.toggle('active', item.dataset.lang === currentLang);
+    });
+
+    // 保存到 localStorage
+    localStorage.setItem('lang', currentLang);
+  }
+
+  /* ---------- 切换语言 ---------- */
+  function switchLang(lang) {
+    if (lang === currentLang) return;
+    currentLang = lang;
+    applyLang();
+    // 重新渲染产品和精选
+    renderProducts();
+    renderFeatured();
+  }
+
   /* ---------- 构建图片 HTML ---------- */
   function buildImgHtml(item, category) {
-    // 使用 products.json 中的 image 字段
     var imagePath = item.image;
     if (!imagePath) {
-      // 回退：按约定路径
       var id = item.id.replace(/-R\d+$/, '');
       imagePath = 'images/' + category + '/' + category + '_' + id + '.png';
     }
     var alt = item.name || item.desc || item.model || '';
     return '<img src="' + imagePath + '" alt="' + alt + '" loading="lazy" onerror="loadImageFallback(this)">';
   }
-
-  /* ---------- 当前状态 ---------- */
-  let currentCategory = 'all';
-  let currentPage = 'home';
 
   /* ========== 页面切换 ========== */
   function switchPage(page) {
@@ -57,12 +95,16 @@
     const empty = $('#emptyTip');
     if (!grid) return;
 
+    const PRODUCTS_LOCAL = getProducts();
     let items = [];
 
     if (currentCategory === 'shower') {
-      // 淋浴/即热筛选
-      (PRODUCTS.faucet || []).forEach(item => {
-        if (['淋浴套装', '淋浴管', '即热'].includes(item.type)) {
+      (PRODUCTS_LOCAL.faucet || []).forEach(item => {
+        // 淋浴/即热筛选 — 英文环境下匹配英文 type
+        var showerTypes = currentLang === 'en'
+          ? ['Shower Set', 'Shower Hose', 'Instant Electric Water Heater']
+          : ['淋浴套装', '淋浴管', '即热'];
+        if (showerTypes.includes(item.type)) {
           items.push({ item, category: 'faucet' });
         }
       });
@@ -72,7 +114,7 @@
         : [currentCategory];
 
       cats.forEach(cat => {
-        (PRODUCTS[cat] || []).forEach(item => {
+        (PRODUCTS_LOCAL[cat] || []).forEach(item => {
           items.push({ item, category: cat });
         });
       });
@@ -92,10 +134,10 @@
     const scroll = $('#featuredScroll');
     if (!scroll) return;
 
-    // 从每个分类取前3个作为精选
+    const PRODUCTS_LOCAL = getProducts();
     const featured = [];
     ['toilet', 'faucet', 'cabinet'].forEach(cat => {
-      (PRODUCTS[cat] || []).slice(0, 3).forEach(item => {
+      (PRODUCTS_LOCAL[cat] || []).slice(0, 3).forEach(item => {
         featured.push({ item, category: cat });
       });
     });
@@ -116,7 +158,7 @@
       el.addEventListener('click', () => {
         const id = el.dataset.id;
         const category = el.dataset.category;
-        const list = PRODUCTS[category] || [];
+        const list = getProducts()[category] || [];
         const item = list.find(p => p.id === id);
         if (item) {
           switchPage('catalog');
@@ -138,17 +180,17 @@
     const imgHtml = '<div class="detail-img">' + buildImgHtml(item, category) + '</div>';
 
     content.innerHTML = '<h2 class="detail-title">' + title + '</h2>' +
-      (item.code ? '<p class="detail-code">产品编号：' + item.code + '</p>' : '') +
-      (item.model ? '<p class="detail-code">产品型号：' + item.model + '</p>' : '') +
+      (item.code ? '<p class="detail-code">' + t('modal.code') + item.code + '</p>' : '') +
+      (item.model ? '<p class="detail-code">' + t('modal.model') + item.model + '</p>' : '') +
       imgHtml +
       '<table class="detail-table">' +
-        (item.type ? '<tr><td>分类</td><td>' + item.type + '</td></tr>' : '') +
-        (item.spec ? '<tr><td>规格</td><td>' + item.spec + '</td></tr>' : '') +
+        (item.type ? '<tr><td>' + t('modal.cat') + '</td><td>' + item.type + '</td></tr>' : '') +
+        (item.spec ? '<tr><td>' + t('modal.spec') + '</td><td>' + item.spec + '</td></tr>' : '') +
       '</table>' +
-      '<h3 class="detail-section-title">产品描述</h3>' +
+      '<h3 class="detail-section-title">' + t('modal.desc.title') + '</h3>' +
       '<ul class="detail-list">' +
         '<li>' + (isFaucet ? item.desc : name) + '</li>' +
-        '<li>请联系我们获取详细技术资料与报价</li>' +
+        '<li>' + t('modal.desc.contact') + '</li>' +
       '</ul>';
 
     modal.classList.add('open');
@@ -187,7 +229,7 @@
       if (!card) return;
       const id = card.dataset.id;
       const category = card.dataset.category;
-      const list = PRODUCTS[category] || [];
+      const list = getProducts()[category] || [];
       const item = list.find(p => p.id === id);
       if (item) openModal(item, category);
     });
@@ -208,11 +250,19 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeModal();
     });
+
+    // 语言切换
+    $$('.lang-item').forEach(item => {
+      item.addEventListener('click', () => {
+        switchLang(item.dataset.lang);
+      });
+    });
   }
 
   /* ========== 初始化 ========== */
   function init() {
     // PRODUCTS is loaded from products.js via <script> tag
+    applyLang();
     renderProducts();
     renderFeatured();
     bindEvents();

@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ========== 语言切换按钮 ========== -->
+  <button class="lang-toggle" id="langToggle" aria-label="Switch Language">
+    <span class="lang-item active" data-lang="zh">中</span>
+    <span class="lang-divider"></span>
+    <span class="lang-item" data-lang="en">EN</span>
+  </button>
+
   <!-- ========== 首页 ========== -->
   <main class="page page-home active" id="pageHome">
     <!-- Hero 区域 -->
@@ -20,18 +27,18 @@
       </div>
       <div class="hero-content">
         <div class="hero-brand">
-          <span class="brand-logo">恒</span>
-          <span class="brand-name">恒峰贸易</span>
+          <span class="brand-logo" data-i18n="brand.logo">恒</span>
+          <span class="brand-name" data-i18n="brand.name">恒峰贸易</span>
         </div>
-        <h1 class="hero-title">全产业源头工厂直供</h1>
-        <p class="hero-subtitle">20年专注 · 品质铸就信赖</p>
+        <h1 class="hero-title" data-i18n="hero.title">全产业源头工厂直供</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">20年专注 · 品质铸就信赖</p>
         <a href="#pageCatalog" class="hero-cta" data-nav="catalog">
-          <span>浏览产品</span>
+          <span data-i18n="hero.cta">浏览产品</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
       <div class="hero-scroll-hint">
-        <span>向下滚动</span>
+        <span data-i18n="hero.scroll">向下滚动</span>
         <div class="scroll-arrow"></div>
       </div>
     </section>
@@ -39,7 +46,7 @@
     <!-- 核心优势 -->
     <section class="advantages">
       <div class="container">
-        <h2 class="section-title">核心优势</h2>
+        <h2 class="section-title" data-i18n="adv.title">核心优势</h2>
         <div class="advantage-grid">
           <div class="advantage-card">
             <div class="advantage-icon">
@@ -48,8 +55,8 @@
                 <path d="M16 24l6 6 10-12"/>
               </svg>
             </div>
-            <h3>全产业链</h3>
-            <p>注塑·冲压·电子·模具·机加工 全自有生产</p>
+            <h3 data-i18n="adv.1.title">全产业链</h3>
+            <p data-i18n="adv.1.desc">注塑·冲压·电子·模具·机加工 全自有生产</p>
           </div>
           <div class="advantage-card">
             <div class="advantage-icon">
@@ -57,8 +64,8 @@
                 <path d="M24 4l6 12 14 2-10 10 2 14-12-6-12 6 2-14-10-10 14-2z"/>
               </svg>
             </div>
-            <h3>品质保证</h3>
-            <p>严格品控体系 拒绝外协拼装</p>
+            <h3 data-i18n="adv.2.title">品质保证</h3>
+            <p data-i18n="adv.2.desc">严格品控体系 拒绝外协拼装</p>
           </div>
           <div class="advantage-card">
             <div class="advantage-icon">
@@ -67,8 +74,8 @@
                 <path d="M8 24h32M16 16V8h16v8"/>
               </svg>
             </div>
-            <h3>工厂直供</h3>
-            <p>源头价格 让利客户</p>
+            <h3 data-i18n="adv.3.title">工厂直供</h3>
+            <p data-i18n="adv.3.desc">源头价格 让利客户</p>
           </div>
         </div>
       </div>
@@ -78,8 +85,8 @@
     <section class="featured">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">精选产品</h2>
-          <a href="#pageCatalog" class="view-all" data-nav="catalog">查看全部 →</a>
+          <h2 class="section-title" data-i18n="featured.title">精选产品</h2>
+          <a href="#pageCatalog" class="view-all" data-nav="catalog" data-i18n="featured.viewall">查看全部 →</a>
         </div>
         <div class="featured-scroll" id="featuredScroll">
           <!-- 精选产品由 JS 动态生成 -->
@@ -95,24 +102,24 @@
       </div>
       <div class="container">
         <div class="about-content">
-          <h2 class="section-title light">关于恒峰</h2>
-          <p class="about-text">
+          <h2 class="section-title light" data-i18n="about.title">关于恒峰</h2>
+          <p class="about-text" data-i18n="about.text">
             恒峰贸易深耕卫浴行业20年，拥有完整的全产业链制造体系。
             从注塑、冲压到电子、模具、机加工，全部自主生产，
             确保每一件产品的卓越品质。
           </p>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-num">20+</span>
-              <span class="stat-label">年行业经验</span>
+              <span class="stat-num" data-i18n="about.stat1.num">20+</span>
+              <span class="stat-label" data-i18n="about.stat1.label">年行业经验</span>
             </div>
             <div class="stat">
-              <span class="stat-num">100+</span>
-              <span class="stat-label">款产品</span>
+              <span class="stat-num" data-i18n="about.stat2.num">100+</span>
+              <span class="stat-label" data-i18n="about.stat2.label">款产品</span>
             </div>
             <div class="stat">
-              <span class="stat-num">50+</span>
-              <span class="stat-label">国家出口</span>
+              <span class="stat-num" data-i18n="about.stat3.num">50+</span>
+              <span class="stat-label" data-i18n="about.stat3.label">国家出口</span>
             </div>
           </div>
         </div>
@@ -122,7 +129,7 @@
     <!-- 联系我们 -->
     <section class="contact">
       <div class="container">
-        <h2 class="section-title">联系我们</h2>
+        <h2 class="section-title" data-i18n="contact.title">联系我们</h2>
         <div class="contact-card">
           <div class="contact-icon">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
@@ -131,7 +138,7 @@
             </svg>
           </div>
           <div class="contact-info">
-            <p class="contact-label">咨询热线</p>
+            <p class="contact-label" data-i18n="contact.label">咨询热线</p>
             <a href="tel:0505688888" class="contact-phone">0505688888</a>
           </div>
         </div>
@@ -144,19 +151,19 @@
     <!-- 顶部标题栏 -->
     <header class="catalog-header">
       <div class="container">
-        <h1 class="catalog-title">产品中心</h1>
-        <p class="catalog-subtitle">浏览我们的全系列产品</p>
+        <h1 class="catalog-title" data-i18n="catalog.title">产品中心</h1>
+        <p class="catalog-subtitle" data-i18n="catalog.subtitle">浏览我们的全系列产品</p>
       </div>
     </header>
 
     <!-- 分类 Tab -->
     <nav class="catalog-tabs">
       <div class="tabs-scroll">
-        <button class="tab-btn active" data-category="all">全部</button>
-        <button class="tab-btn" data-category="toilet">马桶</button>
-        <button class="tab-btn" data-category="faucet">龙头</button>
-        <button class="tab-btn" data-category="cabinet">浴室柜</button>
-        <button class="tab-btn" data-category="shower">淋浴</button>
+        <button class="tab-btn active" data-category="all" data-i18n="tab.all">全部</button>
+        <button class="tab-btn" data-category="toilet" data-i18n="tab.toilet">马桶</button>
+        <button class="tab-btn" data-category="faucet" data-i18n="tab.faucet">龙头</button>
+        <button class="tab-btn" data-category="cabinet" data-i18n="tab.cabinet">浴室柜</button>
+        <button class="tab-btn" data-category="shower" data-i18n="tab.shower">淋浴</button>
       </div>
     </nav>
 
@@ -167,7 +174,7 @@
           <!-- 产品卡片由 JS 动态生成 -->
         </div>
         <div class="empty-tip" id="emptyTip" style="display:none;">
-          <p>暂无产品数据</p>
+          <p data-i18n="catalog.empty">暂无产品数据</p>
         </div>
       </div>
     </section>
@@ -180,7 +187,7 @@
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
         <polyline points="9 22 9 12 15 12 15 22"/>
       </svg>
-      <span class="nav-label">首页</span>
+      <span class="nav-label" data-i18n="nav.home">首页</span>
     </button>
     <button class="nav-item" data-nav="catalog">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -189,7 +196,7 @@
         <rect x="14" y="14" width="7" height="7"/>
         <rect x="3" y="14" width="7" height="7"/>
       </svg>
-      <span class="nav-label">产品</span>
+      <span class="nav-label" data-i18n="nav.catalog">产品</span>
     </button>
   </nav>
 
@@ -218,6 +225,8 @@
 
   <script src="image-fallback.js"></script>
   <script src="products.js"></script>
+  <script src="products_en.js"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

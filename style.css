@@ -911,6 +911,76 @@ section {
   border-radius: 50%;
 }
 
+/* ========== 语言切换按钮 ========== */
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--duration) var(--ease);
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lang-item {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  user-select: none;
+}
+
+.lang-item.active {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.lang-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* 首页 Hero 区域按钮浮在图片上时保持可见 */
+.page-catalog ~ .lang-toggle,
+.page-catalog .lang-toggle {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.page-catalog .lang-toggle:hover {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-toggle {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .lang-toggle:hover {
+    background: rgba(30, 41, 59, 0.8);
+  }
+}
+
+
 /* ========== 响应式 ========== */
 @media (max-width: 480px) {
   .hero-title {
